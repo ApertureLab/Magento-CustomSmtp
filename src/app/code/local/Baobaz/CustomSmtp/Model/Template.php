@@ -2,7 +2,7 @@
 /**
  * @category   Baobaz
  * @package    Baobaz_CustomSmtp
- * @copyright  Copyright (c) 2011 Baobaz (http://www.baobaz.com)
+ * @copyright  Copyright (c) 2011-2013 Baobaz (http://www.baobaz.com)
  * @author     Arnaud Ligny <arnaud.ligny@baobaz.com>
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
@@ -50,7 +50,8 @@ class Baobaz_CustomSmtp_Model_Template extends Mage_Core_Model_Email_Template
             Mage::getStoreConfig('system/smtp/host'),
             array(
                 'port'     => Mage::getStoreConfig('system/smtp/port'),
-                'auth'     => strtolower(Mage::getStoreConfig('system/smtp/auth')),
+                //'auth'     => strtolower(Mage::getStoreConfig('system/smtp/auth')),
+                'auth'     => 'login',
                 'username' => Mage::getStoreConfig('system/smtp/username'),
                 'password' => Mage::getStoreConfig('system/smtp/password'),
                 'ssl'      => Mage::getStoreConfig('system/smtp/ssl'),
@@ -77,7 +78,17 @@ class Baobaz_CustomSmtp_Model_Template extends Mage_Core_Model_Email_Template
         $mail->setFrom($this->getSenderEmail(), $this->getSenderName());
         
         try {
+            Mage::dispatchEvent('baobaz_customsmtp_email_before_send', array(
+                'mail'     => $mail,
+                'template' => $this->getTemplateId(),
+                'subject'  => $this->getProcessedTemplateSubject($variables),
+            ));
             $mail->send();
+            Mage::dispatchEvent('baobaz_customsmtp_email_after_send', array(
+                'mail'     => $mail,
+                'template' => $this->getTemplateId(),
+                'subject'  => $this->getProcessedTemplateSubject($variables),
+            ));
             $this->_mail = null;
         }
         catch (Exception $e) {

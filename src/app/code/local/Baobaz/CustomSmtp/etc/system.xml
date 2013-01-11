@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * @category   Baobaz
+ * @package    Baobaz_CustomSmtp
+ * @copyright  Copyright (c) 2011-2013 Baobaz (http://www.baobaz.com)
+ * @author     Arnaud Ligny <arnaud.ligny@baobaz.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
 <config>
     <sections>
         <system>
@@ -71,6 +80,16 @@
                             <show_in_store>1</show_in_store>
                             <depends><transport>smtp</transport></depends>
                         </ssl>
+                        <test translate="label comment">
+                            <label></label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>Baobaz_CustomSmtp/adminhtml_form_testbutton</frontend_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Sends an email to the Contact Us form recipient.</comment>
+                        </test>
                     </fields>
                 </smtp>
             </groups>
