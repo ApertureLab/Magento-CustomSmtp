@@ -48,6 +48,14 @@ System > Configuration > System > Mail Sending Settings
 * Password: your [Sendgrid password](http://sendgrid.com/developer)
 * SSL: TLS
 
+####[Mailgun](http://www.mailgun.com)
+
+* Host: smtp.mailgun.org
+* Port: 587
+* Username: [postmaster@yourdomainname.mailgun.org](https://mailgun.net/cp/domains)
+* Password: your [Mailgun domain password](https://mailgun.net/cp/domains)
+* SSL: TLS
+
 ####[CheetahSender](https://app.cheetahsender.com)
 
 * Host: relay.cheetahsender.com
