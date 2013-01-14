@@ -11,21 +11,50 @@ Features list:
 Configuration
 -------------
 
-* Config
-    * System > Configuration > System > Mail Sending Settings
-        * Send email via: SMTP mode (or native transport (PHP sendmail()))
-        * Host: SMTP server host
-        * Port: SMTP server port
-        * Username: login username
-        * Password: login password
-        * Secure mode: TLS or SSL
+### Magento configuration
 
-* Mailjet
-    * Host: in.mailjet.com
-    * Port: 587
-    * Username: your API Key
-    * Password: your Secret Key
-    * SSL: TLS
+System > Configuration > System > Mail Sending Settings
+
+* Send email via: SMTP mode (or native transport (PHP sendmail()))
+* Host: SMTP server host
+* Port: SMTP server port
+* Username: login username
+* Password: login password
+* Secure mode: none, TLS or SSL
+
+### Third party service configuration
+
+####[Mailjet](https://www.mailjet.com)
+
+* Host: in.mailjet.com
+* Port: 587
+* Username: your [API Mailjet Key](https://www.mailjet.com/account/api_keys)
+* Password: your [Mailjet Secret Key](https://www.mailjet.com/account/api_keys)
+* SSL: TLS
+
+####[Mandrill](http://mandrill.com) (by MailChimp)
+
+* Host: smtp.mandrillapp.com
+* Port: 587
+* Username: your [Mandrill Username](https://mandrillapp.com/settings/index/)
+* Password: any valid [Mandrill API key](https://mandrillapp.com/settings/index/)
+* SSL: TLS
+
+####[Sendgrid](http://sendgrid.com)
+
+* Host: smtp.sendgrid.net
+* Port: 587
+* Username: your [Sendgrid username](http://sendgrid.com/developer)
+* Password: your [Sendgrid password](http://sendgrid.com/developer)
+* SSL: TLS
+
+####[CheetahSender](https://app.cheetahsender.com)
+
+* Host: relay.cheetahsender.com
+* Port: 25
+* Username: ?
+* Password: ?
+* SSL: none
 
 
 Screenshot
