@@ -4,8 +4,15 @@ Description
 _Baobaz CustomSmtp_ provides a full SMTP configuration in Magento.
 
 Features list:
-* Configure host, port, username/password and secure mode (TSL or SSL)
-* Ability to send a test email from admin
+* Ability to setup host, port, username/password and secure mode (TSL or SSL)
+* Ability to send a test email from admin panel
+* Translated in french
+
+
+Screenshot
+----------
+
+![Baobaz_CustomSmtp Configuration](https://raw.github.com/Narno/Magento_Baobaz_CustomSmtp/master/doc/screenshots/Baobaz_CustomSmtp-Configuration.png "Baobaz_CustomSmtp Configuration")
 
 
 Configuration
@@ -32,7 +39,7 @@ System > Configuration > System > Mail Sending Settings
 * Password: your [Mailjet Secret Key](https://www.mailjet.com/account/api_keys)
 * SSL: TLS
 
-####[Mandrill](http://mandrill.com) (by MailChimp)
+####[Mandrill](http://mandrill.com)
 
 * Host: smtp.mandrillapp.com
 * Port: 587
@@ -65,10 +72,17 @@ System > Configuration > System > Mail Sending Settings
 * SSL: none
 
 
-Screenshot
-----------
+Developper
+---------
 
-![Baobaz_CustomSmtp Configuration](https://raw.github.com/Narno/Magento_Baobaz_CustomSmtp/master/doc/screenshots/Baobaz_CustomSmtp-Configuration.png "Baobaz_CustomSmtp Configuration")
+If you are a developer and want to hack CustomSmtp, you could use two new events:
+* _baobaz_customsmtp_email_before_send_: called before sending e-mail
+* _baobaz_customsmtp_email_after_send_: called after sending e-mail
+
+Each one uses those parameters:
+* mail
+* template (ID)
+* subject
 
 
 License
