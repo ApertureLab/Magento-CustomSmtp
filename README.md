@@ -1,7 +1,7 @@
 Description
 -----------
 
-_Baobaz CustomSmtp_ provides a full SMTP configuration in Magento.
+_CustomSmtp_ provides a full SMTP configuration in Magento.
 
 Features list:
 * Ability to setup host, port, username/password and secure mode (TSL or SSL)
@@ -12,7 +12,7 @@ Features list:
 Screenshot
 ----------
 
-![Baobaz_CustomSmtp Configuration](https://raw.github.com/Narno/Magento_Baobaz_CustomSmtp/master/doc/screenshots/Baobaz_CustomSmtp-Configuration.png "Baobaz_CustomSmtp Configuration")
+![CustomSmtp Configuration](https://raw.github.com/aperturelab/Magento-CustomSmtp/master/doc/screenshots/AL_CustomSmtp-Configuration.png "CustomSmtp Configuration")
 
 
 Configuration
@@ -73,11 +73,11 @@ System > Configuration > System > Mail Sending Settings
 
 
 Developper
----------
+----------
 
-If you are a developer and want to hack CustomSmtp, you could use two new events:
-* _baobaz_customsmtp_email_before_send_: called before sending e-mail
-* _baobaz_customsmtp_email_after_send_: called after sending e-mail
+If you are a developer and want to hack _CustomSmtp_, you could use two new events:
+* _customsmtp_email_before_send_: called before sending e-mail
+* _customsmtp_email_after_send_: called after sending e-mail
 
 Each one uses those parameters:
 * mail
@@ -86,9 +86,9 @@ Each one uses those parameters:
 
 
 License
-----------
+-------
 
-_Baobaz CustomSmtp_ is released under the terms of the [Open Software License 3.0](http://opensource.org/licenses/OSL-3.0).
+Released under the terms of the [Open Software License 3.0](http://opensource.org/licenses/OSL-3.0).
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    AL_CustomSmtp
+ * @copyright  Copyright (c) 2015 Arnaud Ligny
+ * @author     Arnaud Ligny <arnaud@ligny.org>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <AL_CustomSmtp>
+            <version>0.0.2</version>
+        </AL_CustomSmtp>
+    </modules>
+    <admin>
+        <routers>
+            <AL_CustomSmtp>
+                <use>admin</use>
+                <args>
+                    <module>AL_CustomSmtp</module>
+                    <frontName>AL_CustomSmtp</frontName>
+                </args>
+            </AL_CustomSmtp>
+        </routers>
+    </admin>
+    <global>
+        <helpers>
+            <AL_CustomSmtp>
+                <class>AL_CustomSmtp_Helper</class>
+            </AL_CustomSmtp>
+        </helpers>
+        <blocks>
+            <AL_CustomSmtp>
+                 <class>AL_CustomSmtp_Block</class>
+            </AL_CustomSmtp>
+        </blocks>
+        <models>
+             <AL_CustomSmtp>
+                  <class>AL_CustomSmtp_Model</class>
+             </AL_CustomSmtp>
+             <core>
+                 <rewrite>
+                     <email_template>AL_CustomSmtp_Model_Template</email_template>
+                 </rewrite>
+             </core>
+        </models>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <AL_CustomSmtp>
+                    <files>
+                        <default>AL_CustomSmtp.csv</default>
+                    </files>
+                </AL_CustomSmtp>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <customsmtp after="Mage_Adminhtml">AL_CustomSmtp_Adminhtml</customsmtp>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <system>
+            <smtp>
+                <transport>sendmail</transport>
+                <auth>LOGIN</auth>
+                <username />
+                <password />
+                <ssl>tls</ssl>
+            </smtp>
+        </system>
+    </default>
+</config>
