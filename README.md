@@ -1,22 +1,16 @@
-Description
------------
+Magento 1 module that provides a full SMTP configuration.
 
-_CustomSmtp_ provides a full SMTP configuration in Magento.
+## Features
 
-Features list:
 * Ability to setup host, port, username/password and secure mode (TSL or SSL)
 * Ability to send a test email from admin panel
 * Translated in french
 
-
-Screenshot
-----------
+## Screenshot
 
 ![CustomSmtp Configuration](https://raw.github.com/aperturelab/Magento-CustomSmtp/master/doc/screenshots/AL_CustomSmtp-Configuration.png "CustomSmtp Configuration")
 
-
-Configuration
--------------
+## Configuration
 
 ### Magento configuration
 
@@ -71,22 +65,18 @@ System > Configuration > System > Mail Sending Settings
 * Password: ?
 * SSL: none
 
-
-Developper
-----------
+## Developper
 
 If you are a developer and want to hack _CustomSmtp_, you could use two new events:
-* _customsmtp_email_before_send_: called before sending e-mail
-* _customsmtp_email_after_send_: called after sending e-mail
+* ```customsmtp_email_before_send```: called before sending e-mail
+* ```customsmtp_email_after_send```: called after sending e-mail
 
 Each one uses those parameters:
 * mail
 * template (ID)
 * subject
 
-
-License
--------
+## License
 
 Released under the terms of the [Open Software License 3.0](http://opensource.org/licenses/OSL-3.0).
 
