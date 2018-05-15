@@ -1,4 +1,4 @@
-Magento 1 module that provides a full SMTP configuration.
+> Magento 1 module that provides a full SMTP configuration.
 
 ## Features
 
@@ -25,7 +25,7 @@ System > Configuration > System > Mail Sending Settings
 
 ### Third party service configuration
 
-####[Mailjet](https://www.mailjet.com)
+#### [Mailjet](https://www.mailjet.com)
 
 * Host: in.mailjet.com
 * Port: 587
@@ -33,7 +33,7 @@ System > Configuration > System > Mail Sending Settings
 * Password: your [Mailjet Secret Key](https://www.mailjet.com/account/api_keys)
 * SSL: TLS
 
-####[Mandrill](http://mandrill.com)
+#### [Mandrill](http://mandrill.com)
 
 * Host: smtp.mandrillapp.com
 * Port: 587
@@ -41,7 +41,7 @@ System > Configuration > System > Mail Sending Settings
 * Password: any valid [Mandrill API key](https://mandrillapp.com/settings/index/)
 * SSL: TLS
 
-####[Sendgrid](http://sendgrid.com)
+#### [Sendgrid](http://sendgrid.com)
 
 * Host: smtp.sendgrid.net
 * Port: 587
@@ -49,7 +49,7 @@ System > Configuration > System > Mail Sending Settings
 * Password: your [Sendgrid password](http://sendgrid.com/developer)
 * SSL: TLS
 
-####[Mailgun](http://www.mailgun.com)
+#### [Mailgun](http://www.mailgun.com)
 
 * Host: smtp.mailgun.org
 * Port: 587
@@ -57,7 +57,7 @@ System > Configuration > System > Mail Sending Settings
 * Password: your [Mailgun domain password](https://mailgun.net/cp/domains)
 * SSL: TLS
 
-####[CheetahSender](https://app.cheetahsender.com)
+#### [CheetahSender](https://app.cheetahsender.com)
 
 * Host: relay.cheetahsender.com
 * Port: 25
