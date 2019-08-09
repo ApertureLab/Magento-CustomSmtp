@@ -1,3 +1,5 @@
+# Magento-CustomSmtp
+
 > Magento 1 module that provides a full SMTP configuration.
 
 ## Features
@@ -8,7 +10,7 @@
 
 ## Screenshot
 
-![CustomSmtp Configuration](https://raw.github.com/aperturelab/Magento-CustomSmtp/master/doc/screenshots/AL_CustomSmtp-Configuration.png "CustomSmtp Configuration")
+![CustomSmtp Configuration](doc/screenshots/AL_CustomSmtp-Configuration.png "CustomSmtp Configuration")
 
 ## Configuration
 
